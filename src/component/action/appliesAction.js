@@ -5,7 +5,7 @@ import { appliesFailed, appliesRequest, appliesSuccess } from '../Slice/AppliesS
 export const getApplies=async (dispatch) => {
     try {
         dispatch(appliesRequest())
-        const {data} = await axios.get(`http://localhost:6001/api/v1/applies`) 
+        const {data} = await axios.get(`https://jobportalbackend-l9ef.onrender.com/api/v1/applies`) 
         dispatch(appliesSuccess(data))
         console.log(data)
     

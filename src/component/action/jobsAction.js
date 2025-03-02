@@ -4,7 +4,7 @@ import { jobsFailed, jobsRequest, jobsSuccess } from "../Slice/JobsSlice"
 export const getJob=async (dispatch) => {
     try {
         dispatch(jobsRequest())
-        const {data} = await axios.get(`http://localhost:6001/api/v1/jobs`) 
+        const {data} = await axios.get(`https://jobportalbackend-l9ef.onrender.com/api/v1/jobs`) 
         dispatch(jobsSuccess(data))
         console.log(data)
     
